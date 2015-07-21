@@ -161,7 +161,6 @@ func (s *Server) FinishAuthorizeRequest(w *Response, r *http.Request, ar *Author
 	w.SetRedirect(ar.RedirectUri)
 
 	if ar.Authorized {
-		if ar.Type == TOKEN { w.SetRedirectFragment(true) }
 			// generate token directly
 			ret := &AccessRequest{
 				Type:            IMPLICIT,
