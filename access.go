@@ -5,7 +5,6 @@ import (
 	"net/http"
 	"strings"
 	"time"
-	"fmt"
 )
 
 // AccessRequestType is the type for OAuth param `grant_type`
