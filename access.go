@@ -180,7 +180,7 @@ func (s *Server) handleAuthorizationCodeRequest(w *Response, r *http.Request) *A
 	var err error
 	ret.AuthorizeData, err = w.Storage.LoadAuthorize(ret.Code)
 	if err != nil {
-		w.SetError(E_INVALID_GRANT, fmt.Sprintf("handleAuthCodeReq invalid grant 2 code: %s\nredirect: %s\n internal error: %s", ret.Code, ret.RedirectUri, err.Error()))
+		w.SetError(E_INVALID_GRANT, "")
 		w.InternalError = err
 		return nil
 	}
